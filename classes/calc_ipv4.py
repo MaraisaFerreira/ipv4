@@ -37,7 +37,6 @@ class CalcIPV4:
         return self._get_ips_amount()
 
     # setters
-
     @ip.setter
     def ip(self, value):
         if not self._ip_validator(value):
@@ -77,6 +76,7 @@ class CalcIPV4:
         if not hasattr(self, 'mask'):
             self.mask = self._binary_to_ip(self._binary_mask)
 
+    # methods
     @staticmethod
     def _ip_validator(ip):
         regexp = re.compile(
